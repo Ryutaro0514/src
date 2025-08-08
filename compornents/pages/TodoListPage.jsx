@@ -21,7 +21,6 @@ export function TodoListPage() {
     fetchAllTodos();
   }, []);
 
-  // 完了・未完了API成功後にデータ再取得して状態更新
   const handleComplete = () => fetchAllTodos();
   const handleUncomplete = () => fetchAllTodos();
 
@@ -41,8 +40,6 @@ export function TodoListPage() {
       console.error(error);
     }
   };
-
-  // フィルタ、検索、ソート処理は以前通りです（省略可）
 
   const filteredTodos = todos
     .filter(todo => {

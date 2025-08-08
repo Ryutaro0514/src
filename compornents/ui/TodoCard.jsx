@@ -4,7 +4,7 @@ import { TodoDelete } from "../pages/TodoDelete";
 
 const TodoCard = ({ todo, showCheckbox, onComplete, onUncomplete, onDelete }) => {
   const { id, title, description } = todo;
-  const [isCompleted, setIsCompleted] = useState(todo.status === "completed"); // ローカル状態
+  const [isCompleted, setIsCompleted] = useState(todo.status === "completed");
 
   const handleCheckboxClick = async (e) => {
     e.stopPropagation();
